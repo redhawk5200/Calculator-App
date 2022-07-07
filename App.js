@@ -1,15 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View, StatusBar} from 'react-native';
+
+//here we import the properties like text, buttons etc from react native 
+import {StyleSheet, Text, View, StatusBar, Button} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>
-        Abdul Wahab Khan.
-      </Text>
-      <Text style={styles.textStyle}>
-        This is React Native.
-      </Text>
+      <Button title='Click me' color="red" onPress={()=>alert('Welcome to my first app')} disabled={false}>
+
+      </Button>
     </View>
   );
 }
@@ -21,12 +20,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textStyle: {
-    fontSize: 30,
-    color: 'purple',
-    fontWeight: 'bold',
-    fontStyle: 'italic'
-  }
 });
 
 
