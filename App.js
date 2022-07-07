@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
 
 
 //<Text>Hello world kadnoasoasdajoidasj</Text>
-//<StatusBar style="auto" />
+//<StatusBar style="auto" />j
