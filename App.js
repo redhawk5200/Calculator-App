@@ -2,33 +2,30 @@
 import React, {useState} from 'react';
 
 //here we import the properties like text, buttons etc from react native
-import {StyleSheet, Text, View, StatusBar, Button} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState('This is the old name');
-  const [person, setPerson] = useState({name: 'Abdur Rafay', age: 20});
-
-  //creating a function changeme to run when user clicks the button
-  const clickme = () => {
-    setName('This is the new name');
-    setPerson({name: 'Abdul Wahab', age: 22});
-  };
-
+  const [name, setName] = useState('Abdul Wahab');
+  const [age, setAge] = useState(24);
   return (
     <View style={styles.container}>
-      <Text>{name}</Text>
+      <Text>Enter your name: </Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={text => setName(text)}
+        placeholder="Enter your name"
+        keyboardType="default"
+      />
+      <Text>Enter your age: </Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={text => setAge(text)}
+        placeholder="Enter your Age"
+        keyboardType="numeric"
+      />
       <Text>
-        My name is {person.name} and age is {person.age}
+        My name is {name} and my age is {age} years.
       </Text>
-      <View style={styles.button}>
-        {/*the button will initiate the method clickme when the user will click it using the property onPress of the button*/}
-        <Button
-          title="change"
-          color="green"
-          onPress={clickme}
-          touchSoundDisabled={false}
-        />
-      </View>
     </View>
   );
 }
@@ -41,9 +38,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: 'red',
     padding: 10,
     margin: 20,
+  },
+  input: {
+    borderColor: 'black',
+    borderWidth: 1,
+    padding: 10,
+    margin: 10,
+    width: 150,
   },
 });
 
