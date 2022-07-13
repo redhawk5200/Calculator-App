@@ -9,6 +9,7 @@ import {
   TextInput,
   Button,
   ScrollView,
+  FlatList,
 } from 'react-native';
 
 export default function App() {
@@ -31,7 +32,15 @@ export default function App() {
   ]);
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <FlatList
+        data={fruit}
+        renderItem={({item})=> (
+          <View>
+            <Text style={styles.item}>{item.name}</Text>
+          </View>
+        )}
+      />
+      {/*<ScrollView>
         {fruit.map(item => {
           return (
             <View key={item.key}>
@@ -39,7 +48,7 @@ export default function App() {
             </View>
           );
         })}
-      </ScrollView>
+      </ScrollView>*/}
     </View>
   );
 }
