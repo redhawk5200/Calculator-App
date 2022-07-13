@@ -5,27 +5,22 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState('Abdul Wahab');
-  const [age, setAge] = useState(24);
+  const [fruit, setFruit] = useState([
+    {name: 'Apple', key: 1},
+    {name: 'Mango', key: 2},
+    {name: 'Banana', key: 3},
+    {name: 'Orange', key: 4},
+    {name: 'Mango', key: 5},
+  ]);
   return (
     <View style={styles.container}>
-      <Text>Enter your name: </Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={text => setName(text)}
-        placeholder="Enter your name"
-        keyboardType="default"
-      />
-      <Text>Enter your age: </Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={text => setAge(text)}
-        placeholder="Enter your Age"
-        keyboardType="numeric"
-      />
-      <Text>
-        My name is {name} and my age is {age} years.
-      </Text>
+      {fruit.map(item => {
+        return (
+          <View key={item.key}>
+            <Text style={styles.item}>{item.name}</Text>
+          </View>
+        );
+      })}
     </View>
   );
 }
@@ -34,19 +29,16 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   button: {
     padding: 10,
     margin: 20,
   },
-  input: {
-    borderColor: 'black',
-    borderWidth: 1,
-    padding: 10,
-    margin: 10,
-    width: 150,
+  item: {
+    fontSize: 22,
+    backgroundColor: 'yellow',
+    marginTop: 20,
+    padding: 20,
   },
 });
 
