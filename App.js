@@ -2,7 +2,14 @@
 import React, {useState} from 'react';
 
 //here we import the properties like text, buttons etc from react native
-import {StyleSheet, Text, View, TextInput, Button} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  ScrollView,
+} from 'react-native';
 
 export default function App() {
   const [fruit, setFruit] = useState([
@@ -11,16 +18,28 @@ export default function App() {
     {name: 'Banana', key: 3},
     {name: 'Orange', key: 4},
     {name: 'Mango', key: 5},
+    {name: 'Apple', key: 6},
+    {name: 'Mango', key: 7},
+    {name: 'Banana', key: 8},
+    {name: 'Orange', key: 9},
+    {name: 'Mango', key: 10},
+    {name: 'Apple', key: 11},
+    {name: 'Mango', key: 12},
+    {name: 'Banana', key: 13},
+    {name: 'Orange', key: 14},
+    {name: 'Mango', key: 15},
   ]);
   return (
     <View style={styles.container}>
-      {fruit.map(item => {
-        return (
-          <View key={item.key}>
-            <Text style={styles.item}>{item.name}</Text>
-          </View>
-        );
-      })}
+      <ScrollView>
+        {fruit.map(item => {
+          return (
+            <View key={item.key}>
+              <Text style={styles.item}>{item.name}</Text>
+            </View>
+          );
+        })}
+      </ScrollView>
     </View>
   );
 }
