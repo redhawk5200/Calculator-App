@@ -12,29 +12,18 @@ import {
   FlatList,
   TouchableOpacity,
   Alert,
+  Image,
 } from 'react-native';
 
 import styles from './styles';
 
 export default function App() {
 
-  const[age, setAge] = useState(0);
-
-  const ageHandler=()=>{
-    if(age>18){
-      Alert.alert("Yes, you can drink");
-    }
-    else{
-      Alert.alert("No, you can't drink");
-    }
-  }
-
   return (
     <View style={styles.container}>
-    <TextInput style={styles.input}/>
-    <TextInput style={styles.input} onChangeText={(text)=>setAge(text)}/>
-    <Button style={styles.button} title="Can I drink?" onPress={()=>ageHandler()}/>
-
+      <View>
+        <Image style={styles.image} source={require('./assets/image1.jpg')}/>
+      </View>
     </View>
   );
 }

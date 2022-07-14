@@ -17,5 +17,9 @@ export default StyleSheet.create({
         backgroundColor: 'blue',
         textDecorationColor: 'red',
         padding: 60,
+    },
+    image: {
+        height: '100%',
+        width: '100%'
     }
   });
