@@ -11,44 +11,30 @@ import {
   ScrollView,
   FlatList,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 import styles from './styles';
 
 export default function App() {
-  const [people, setPeople] = useState([
-    {name: 'Vincius Jr', key: 1},
-    {name: 'Mendy', key: 2},
-    {name: 'Karim Benzema', key: 3},
-    {name: 'Carvajal', key: 4},
-    {name: 'Eder Militao', key: 5},
-    {name: 'David Alaba', key: 6},
-    {name: 'Rodrygooo', key: 7},
-    {name: 'Luka Modric', key: 8},
-    {name: 'Cavaminga', key: 9},
-    {name: 'Toni Kroos', key: 10},
-    {name: 'Valverde', key: 11},
-    {name: 'Lucas Vasquez', key: 12},
-    {name: 'Nacho', key: 13},
-    {name: 'Dani Ceballos', key: 14},
-  ]);
 
-  const pressHandler = name => {
-    console.log(name);
+  const[age, setAge] = useState(0);
+
+  const ageHandler=()=>{
+    if(age>18){
+      Alert.alert("Yes, you can drink");
+    }
+    else{
+      Alert.alert("No, you can't drink");
+    }
   }
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={people}
-        renderItem={({item}) => (
-          <View>
-            <TouchableOpacity onPress={() => pressHandler(item.name)}>
-              <Text style={styles.item}>{item.name}</Text>
-            </TouchableOpacity>
-          </View>
-        )}
-      />
+    <TextInput style={styles.input}/>
+    <TextInput style={styles.input} onChangeText={(text)=>setAge(text)}/>
+    <Button style={styles.button} title="Can I drink?" onPress={()=>ageHandler()}/>
+
     </View>
   );
 }

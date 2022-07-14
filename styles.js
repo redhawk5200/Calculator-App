@@ -5,14 +5,17 @@ export default StyleSheet.create({
       backgroundColor: 'white',
       flex: 1,
     },
+    input: {
+        backgroundColor: 'yellow',
+        borderWidth: 10,
+        padding: 20,
+        borderColor: 'black',
+        marginTop: 20,
+        marginBottom: 40,
+    },
     button: {
-      padding: 10,
-      margin: 20,
-    },
-    item: {
-      fontSize: 22,
-      backgroundColor: 'yellow',
-      marginTop: 20,
-      padding: 20,
-    },
+        backgroundColor: 'blue',
+        textDecorationColor: 'red',
+        padding: 60,
+    }
   });
