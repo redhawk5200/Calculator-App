@@ -18,25 +18,30 @@ import {
 import styles from './styles';
 
 export default function App() {
-  const [dice, setDice] = useState(0);
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+  const [gender, setGender] = useState("");
 
-  const images = {
-    pics: {
-      '0':require('./assets/1.jpg'),
-      '1':require('./assets/2.jpg'),
-      '2':require('./assets/3.jpg'),
-      '3':require('./assets/4.jpg'),
-      '4':require('./assets/5.jpg'),
-      '5':require('./assets/6.jpg'),
-    }
+  const noHandler = () =>{
+    setName("");
+    setAge(0);
+    setGender("");
+  }
+
+  const pressHandler = () =>{
+    Alert.alert("Details","Are you sure you want submit?",[
+      {text: "Yes", onPress: () => console.log("Yes is pressed")},
+      {text: "No", onPress: () => noHandler()},
+    ])
   }
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={images.pics[dice]}/>
-      <View style={styles.button}>
-        <Button style={styles.button} title='Roll Dice' onPress={()=>setDice(Math.floor(Math.random()*6))}/>
-      </View>
+      <TextInput  style={styles.input} onChangeText={(text)=>setName(text)}  placeholder="Enter your name"/>
+      <TextInput  style={styles.input} onChangeText={(text)=>setAge(text)}  placeholder="Enter your age"/>
+      <TextInput  style={styles.input} onChangeText={(text)=>setGender(text)}  placeholder="Enter your gender"/>
+      <Button title="Submit" style={styles.button} onPress={()=>pressHandler()}/>
+      <Text> Your name is {name}, your age is {age} and your gender is {gender}</Text>
     </View>
   );
 }
