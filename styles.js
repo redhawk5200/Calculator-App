@@ -16,10 +16,11 @@ export default StyleSheet.create({
     button: {
         backgroundColor: 'blue',
         textDecorationColor: 'red',
-        padding: 60,
+        paddingTop: 60,
+        margin:20,
     },
     image: {
         height: '100%',
-        width: '100%'
+        width: '50%'
     }
   });
