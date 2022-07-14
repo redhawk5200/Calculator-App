@@ -33,8 +33,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Image source={images.pics[dice]}/>
-      <Button title='Roll Dice' onPress={()=>setDice(Math.floor(Math.random()*6))}/>
+      <Image style={styles.image} source={images.pics[dice]}/>
+      <View style={styles.button}>
+        <Button style={styles.button} title='Roll Dice' onPress={()=>setDice(Math.floor(Math.random()*6))}/>
+      </View>
     </View>
   );
 }

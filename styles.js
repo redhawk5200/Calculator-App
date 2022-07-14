@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
+      alignItems: 'center',
       backgroundColor: 'white',
       flex: 1,
     },
@@ -14,13 +15,10 @@ export default StyleSheet.create({
         marginBottom: 40,
     },
     button: {
-        backgroundColor: 'blue',
-        textDecorationColor: 'red',
-        paddingTop: 60,
+        paddingTop: 30,
         margin:20,
+        fontWeight: 'italic'
     },
     image: {
-        height: '100%',
-        width: '50%'
     }
   });
