@@ -22,7 +22,7 @@ import styles from './styles';
 export default function App() {
   
   return (
-      <View style={{backgroundColor:"black",flex:1}}>
+      <View style={{backgroundColor:"black",flex:1,flexDirection: 'row'}}>
         <View style={{backgroundColor:"green",flex:1}}></View>
         <View style={{backgroundColor:"blue",flex:1}}></View>
         <View style={{backgroundColor:"red",flex:1}}></View>
