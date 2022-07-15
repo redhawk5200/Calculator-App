@@ -25,12 +25,13 @@ import styles from './styles';
 export default function App(){
 
   const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
 
   return (
       <View style={styles.container}>
         <TextInput onChangeText={(text)=>setName(text)} style={styles.input} placeholder="Enter your name: "/>
-        <Button title='show'/>
-        <Display name={name}/>
+        <TextInput onChangeText={(text)=>setAge(text)} style={styles.input} placeholder="Enter your age: "/>
+        <Display name={name} age={age}/>
       </View>  
   );
 }
