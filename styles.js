@@ -9,11 +9,16 @@ export default StyleSheet.create({
     input: {
         padding: 20,
         margin:20,
-        backgroundColor: 'pink',
+        backgroundColor: 'lightblue',
     },
     button: {
-        borderWidth: 20,
-        borderColor: 'black',
+        backgroundColor: 'pink',
+        padding: 20,
+        margin: 20,
+        borderWidth: 5,
+        borderColor: 'purple',
+        borderRadius: 5,
+        alignItems: 'center',
     },
     image: {
     }
