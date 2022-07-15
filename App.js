@@ -20,19 +20,16 @@ import {
 import styles from './styles';
 
 export default function App() {
-
-  const [number, setNumber] = useState(0);
-
-  useEffect(()=>{
-    if(number>30){
-      console.log("The amount has exceeded the limit");
-    }
-  })
   
   return (
-      <View style={styles.container}>
-        <Text style={styles.text}>{number}</Text>
-        <Button title="Update State" onPress={()=>setNumber(number+1)}/>
+      <View style={{backgroundColor:"black",flex:1}}>
+        <View style={{backgroundColor:"green",flex:1}}></View>
+        <View style={{backgroundColor:"blue",flex:1}}></View>
+        <View style={{backgroundColor:"red",flex:1}}></View>
+        <View style={{backgroundColor:"pink",flex:1}}></View>
+        <View style={{backgroundColor:"purple",flex:2}}></View>
+        <View style={{backgroundColor:"brown",flex:1}}></View>
+        {/*<Button title='Click Me'/>*/}
       </View>  
   );
 }
