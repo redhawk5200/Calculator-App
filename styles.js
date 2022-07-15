@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-      //alignItems: 'center',
+      alignItems: 'center',
       backgroundColor: 'white',
       flex: 1,
     },
@@ -20,6 +20,9 @@ export default StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
     },
-    image: {
-    }
+    text: {
+        marginTop: 30,
+        fontSize: 120,
+        
+    },
   });

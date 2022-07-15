@@ -1,5 +1,5 @@
 //to change a data type dynamically you have to import {useState} from react library
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 //here we import the properties like text, buttons etc from react native
 import {
@@ -21,19 +21,19 @@ import styles from './styles';
 
 export default function App() {
 
-  const [name, setName] = useState("");
+  const [number, setNumber] = useState(0);
+
+  useEffect(()=>{
+    if(number>30){
+      console.log("The amount has exceeded the limit");
+    }
+  })
   
   return (
-    <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()}>
       <View style={styles.container}>
-        <TextInput style={styles.input} onChangeText={(text)=>setName(text)} />
-        <TouchableOpacity onPress={()=>Alert.alert("Your Details:","Your name is " + name)}>
-          <View style={styles.button} >
-            <Text>Press</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-    </TouchableWithoutFeedback>  
+        <Text style={styles.text}>{number}</Text>
+        <Button title="Update State" onPress={()=>setNumber(number+1)}/>
+      </View>  
   );
 }
 
