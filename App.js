@@ -19,13 +19,18 @@ import {
 } from 'react-native';
 
 import Greetings from './Greetings';
+import Display from './Display';
 import styles from './styles';
 
 export default function App(){
 
+  const [name, setName] = useState("");
+
   return (
       <View style={styles.container}>
-        <Greetings/>
+        <TextInput onChangeText={(text)=>setName(text)} style={styles.input} placeholder="Enter your name: "/>
+        <Button title='show'/>
+        <Display name={name}/>
       </View>  
   );
 }
