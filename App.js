@@ -15,21 +15,26 @@ import {
   Image,
   TouchableWithoutFeedback,
   Keyboard,
+  Modal,
 } from 'react-native';
 
 import styles from './styles';
 
-export default function App() {
+export default function App(){
+
+  const [name,setName] = useState("");
+  const [age, setAge] = useState(0);
+  const [open, setOpen] = useState(false);
   
   return (
-      <View style={{backgroundColor:"black",flex:1,flexDirection: 'row'}}>
-        <View style={{backgroundColor:"green",flex:1}}></View>
-        <View style={{backgroundColor:"blue",flex:1}}></View>
-        <View style={{backgroundColor:"red",flex:1}}></View>
-        <View style={{backgroundColor:"pink",flex:1}}></View>
-        <View style={{backgroundColor:"purple",flex:2}}></View>
-        <View style={{backgroundColor:"brown",flex:1}}></View>
-        {/*<Button title='Click Me'/>*/}
+      <View style={styles.container}>
+        <TextInput style={styles.input} placeholder="Enter your name" onChangeText={(text)=>setName(text)}/>
+        <TextInput style={styles.input} placeholder="Enter your age" onChangeText={(text)=>setAge(text)}/>
+        <Button style={styles.button}  title='Click me' onPress={()=>setOpen(true)}/>
+          <Modal visible={open}>
+            <Text style={styles.text}>Your name is {name} and your age is {age} years old</Text>
+            <Button style={styles.button}  title='Click me to change details' onPress={()=>setOpen(false)}/>
+          </Modal>
       </View>  
   );
 }

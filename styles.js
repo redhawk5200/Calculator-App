@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-      alignItems: 'center',
+      //alignItems: 'center',
       backgroundColor: 'white',
       flex: 1,
     },
@@ -22,7 +22,19 @@ export default StyleSheet.create({
     },
     text: {
         marginTop: 30,
-        fontSize: 120,
+        fontSize: 20,
         
+    },
+    view1: {
+      backgroundColor: 'green',
+      flex: 1,
+    },
+    view2: {
+      backgroundColor: 'blue',
+      flex: 1,
+    },
+    view3: {
+      backgroundColor: 'yellow',
+      flex: 1,
     },
   });
