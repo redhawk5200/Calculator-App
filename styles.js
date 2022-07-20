@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-      //alignItems: 'center',
+      alignItems: 'center',
       backgroundColor: 'white',
       flex: 1,
     },
@@ -12,22 +12,23 @@ export default StyleSheet.create({
         backgroundColor: 'lightblue',
     },
     button: {
-        backgroundColor: 'pink',
+        backgroundColor: 'yellow',
         padding: 20,
         margin: 20,
         borderWidth: 5,
-        borderColor: 'purple',
+        borderColor: 'black',
         borderRadius: 5,
         alignItems: 'center',
+        fontSize: 20,
     },
     text: {
         marginTop: 30,
-        fontSize: 20,
+        fontSize: 100,
         
     },
-    view1: {
-      backgroundColor: 'green',
-      flex: 1,
+    text1: {
+      fontSize:30,
+      color: 'black',
     },
     view2: {
       backgroundColor: 'blue',

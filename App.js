@@ -18,24 +18,28 @@ import {
   Modal,
 } from 'react-native';
 
-import Greetings from './Greetings';
-import Display from './Display';
 import styles from './styles';
 
 export default function App(){
-
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
+  
+  const [number, setNumber]=useState(0);
 
   return (
       <View style={styles.container}>
-        <TextInput onChangeText={(text)=>setName(text)} style={styles.input} placeholder="Enter your name: "/>
-        <TextInput onChangeText={(text)=>setAge(text)} style={styles.input} placeholder="Enter your age: "/>
-        <Display name={name} age={age}/>
+        <Text style={styles.text}>{number}</Text>
+        <TouchableOpacity style={styles.button} onPress={()=>setNumber(number+1)}>
+          <Text style={styles.text1}>+</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={()=>setNumber(Math.max(number-1,0))} >
+          <Text style={styles.text1}>-</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={()=>setNumber(0)}>
+          <Text style={styles.text1}>Reset</Text>
+        </TouchableOpacity>
       </View>  
   );
 }
 
 
-//<Text>Hello world kadnoasoasdajoidasj</Text>
+//<Text>Hello world </Text>
 ////<StatusBar style="auto" />j
