@@ -6,11 +6,6 @@ export default StyleSheet.create({
       backgroundColor: 'white',
       flex: 1,
     },
-    input: {
-        padding: 20,
-        margin:20,
-        backgroundColor: 'lightblue',
-    },
     button: {
         backgroundColor: 'yellow',
         padding: 20,
@@ -20,22 +15,27 @@ export default StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
         fontSize: 20,
+        width: '50%',
+        height: '15%',
     },
     text: {
+        color: 'black',
+        backgroundColor: 'yellow',
+        paddingLeft: 85,
+        alignItems: 'center',
         marginTop: 30,
-        fontSize: 100,
-        
+        fontSize: 60,
+        borderColor: 'black',
+        borderWidth: 5,
+        borderRadius: 5,
+        width: '50%',
+        height: '15%'
     },
     text1: {
       fontSize:30,
       color: 'black',
     },
-    view2: {
-      backgroundColor: 'blue',
-      flex: 1,
-    },
-    view3: {
-      backgroundColor: 'yellow',
-      flex: 1,
-    },
+    align: {
+      
+    }
   });

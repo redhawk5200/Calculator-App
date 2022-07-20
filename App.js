@@ -26,7 +26,7 @@ export default function App(){
 
   return (
       <View style={styles.container}>
-        <Text style={styles.text}>{number}</Text>
+          <Text style={styles.text}>{number}</Text>
         <TouchableOpacity style={styles.button} onPress={()=>setNumber(number+1)}>
           <Text style={styles.text1}>+</Text>
         </TouchableOpacity>
