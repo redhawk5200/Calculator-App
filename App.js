@@ -21,21 +21,15 @@ import {
 import styles from './styles';
 
 export default function App(){
-  
-  const [number, setNumber]=useState(0);
 
   return (
       <View style={styles.container}>
-          <Text style={styles.text}>{number}</Text>
-        <TouchableOpacity style={styles.button} onPress={()=>setNumber(number+1)}>
-          <Text style={styles.text1}>+</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=>setNumber(Math.max(number-1,0))} >
-          <Text style={styles.text1}>-</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=>setNumber(0)}>
-          <Text style={styles.text1}>Reset</Text>
-        </TouchableOpacity>
+        <View style={styles.result}></View>
+        <View style={styles.calculation}></View>
+        <View style={styles.buttons}>
+          <View style={styles.numbers}></View>
+          <View style={styles.operations}></View>
+        </View>
       </View>  
   );
 }

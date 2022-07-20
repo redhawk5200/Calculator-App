@@ -2,40 +2,26 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-      alignItems: 'center',
-      backgroundColor: 'white',
       flex: 1,
     },
-    button: {
-        backgroundColor: 'yellow',
-        padding: 20,
-        margin: 20,
-        borderWidth: 5,
-        borderColor: 'black',
-        borderRadius: 5,
-        alignItems: 'center',
-        fontSize: 20,
-        width: '50%',
-        height: '15%',
+    result: {
+      flex: 2,
+      backgroundColor: 'red',
     },
-    text: {
-        color: 'black',
-        backgroundColor: 'yellow',
-        paddingLeft: 85,
-        alignItems: 'center',
-        marginTop: 30,
-        fontSize: 60,
-        borderColor: 'black',
-        borderWidth: 5,
-        borderRadius: 5,
-        width: '50%',
-        height: '15%'
+    calculation: {
+      flex: 1,
+      backgroundColor: 'green',
     },
-    text1: {
-      fontSize:30,
-      color: 'black',
+    buttons: {
+      flexDirection: 'row',
+      flex: 7,
     },
-    align: {
-      
-    }
+    numbers: {
+      flex: 3,
+      backgroundColor: 'yellow',
+    },
+    operations: {
+      flex: 1,
+      backgroundColor: 'black',
+    },
   });
