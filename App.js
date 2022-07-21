@@ -24,11 +24,41 @@ export default function App(){
 
   return (
       <View style={styles.container}>
-        <View style={styles.result}></View>
-        <View style={styles.calculation}></View>
+        <View style={styles.result}>
+          <Text style={styles.resText}>11*11</Text>
+        </View>
+        <View style={styles.calculation}>
+          <Text style={styles.calText}>121</Text>
+        </View>
         <View style={styles.buttons}>
-          <View style={styles.numbers}></View>
-          <View style={styles.operations}></View>
+          <View style={styles.numbers}>
+            <View style={styles.row}>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+            </View>
+            <View style={styles.row}>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+            </View>
+            <View style={styles.row}>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+            </View>
+            <View style={styles.row}>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.operations}>
+              <TouchableOpacity><Text>+</Text></TouchableOpacity>
+              <TouchableOpacity><Text>+</Text></TouchableOpacity>
+              <TouchableOpacity><Text>+</Text></TouchableOpacity>
+              <TouchableOpacity><Text>+</Text></TouchableOpacity>
+          </View>
         </View>
       </View>  
   );
