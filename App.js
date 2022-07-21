@@ -25,22 +25,25 @@ export default class App extends React.Component{
   constructor(){
     super()
     this.state={
-      resultText: ""
+      resultText: "",
+      caltext: "",
     }
-    this.operations=['√','%','DEL','AC','+','x','÷','='];
+    this.operations=['√','%','DEL','AC','+','x','÷','-'];
   }
 
-  calculationofText(){
+  calculationresult(){
     const text = this.state.resultText;
     //seperating operators
-
+    this.setState({
+      caltext: eval(text)
+    })
   }
 
   buttonPressed(text){
-    console.log(text)
+    //console.log(text)
 
-    if(text === '='){
-      return this.calculationofText(this.state.resultText);
+    if(text == '='){
+      return this.calculationresult();
     }
 
     this.setState({
@@ -52,7 +55,7 @@ export default class App extends React.Component{
     switch(operation){
       case 'DEL':
         let text = this.state.resultText.split('');
-        text.pop();
+        text.pop()
         this.setState({
           resultText: text.join('')
         })
@@ -61,15 +64,15 @@ export default class App extends React.Component{
       case '-':
       case '÷':
       case 'x':
+      case '%':
+      case '√':
         
         const lastChar = this.state.resultText.split('').pop()
         
         if(this.operations.indexOf(lastChar) > 0) return
 
-
-        if(this.state.text === ""){ 
-          return
-        }
+        if(this.state.text == "") return
+        
         this.setState({
           resultText: this.state.resultText + operation
         })
@@ -78,7 +81,7 @@ export default class App extends React.Component{
 
   render(){
     let rows = []
-    let nums = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [0, '.', '-']];
+    let nums = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [0, '.', '=']];
 
     for(let i=0; i<4; i++){
       let row = []
@@ -109,7 +112,7 @@ export default class App extends React.Component{
             <Text style={styles.resText}>{this.state.resultText}</Text>
           </View>
           <View style={styles.calculation}>
-            <Text style={styles.calText}>121</Text>
+            <Text style={styles.calText}>{this.state.caltext}</Text>
           </View>
           <View style={styles.buttons}>
             <View style={styles.numbers}>
