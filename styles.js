@@ -4,6 +4,16 @@ export default StyleSheet.create({
     container: {
       flex: 1,
     },
+    btn: {
+      flex: 1,
+      alignSelf: 'stretch',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    btnText: {
+      fontSize: 30,
+      color: 'black',
+    },
     resText: {
       fontSize: 24,
       color: 'white',
@@ -14,13 +24,13 @@ export default StyleSheet.create({
     },
     result: {
       flex: 2,
-      backgroundColor: 'red',
+      backgroundColor: '#7F5283',
       justifyContent: 'center',
       alignItems: 'flex-end',
     },
     calculation: {
       flex: 1,
-      backgroundColor: 'green',
+      backgroundColor: '#7A86B6',
       justifyContent: 'center',
       alignItems: 'flex-end',
     },
@@ -30,11 +40,11 @@ export default StyleSheet.create({
     },
     numbers: {
       flex: 3,
-      backgroundColor: 'yellow',
+      backgroundColor: '#FEFBF6',
     },
     operations: {
       flex: 1,
-      backgroundColor: 'pink',
+      backgroundColor: '#A6D1E6',
       justifyContent: 'space-around',
       alignItems: 'center',
     },

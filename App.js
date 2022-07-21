@@ -33,31 +33,31 @@ export default function App(){
         <View style={styles.buttons}>
           <View style={styles.numbers}>
             <View style={styles.row}>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>7</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>8</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>9</Text></TouchableOpacity>
             </View>
             <View style={styles.row}>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>4</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>5</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>6</Text></TouchableOpacity>
             </View>
             <View style={styles.row}>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>1</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>2</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>3</Text></TouchableOpacity>
             </View>
             <View style={styles.row}>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
-              <TouchableOpacity><Text>0</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>0</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>.</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}> </Text></TouchableOpacity>
             </View>
           </View>
           <View style={styles.operations}>
-              <TouchableOpacity><Text>+</Text></TouchableOpacity>
-              <TouchableOpacity><Text>+</Text></TouchableOpacity>
-              <TouchableOpacity><Text>+</Text></TouchableOpacity>
-              <TouchableOpacity><Text>+</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>+</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>-</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>/</Text></TouchableOpacity>
+              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>x</Text></TouchableOpacity>
           </View>
         </View>
       </View>  
