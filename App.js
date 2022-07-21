@@ -28,7 +28,7 @@ export default class App extends React.Component{
       resultText: "",
       caltext: "",
     }
-    this.operations=['√','%','DEL','AC','+','x','÷','-'];
+    this.operations=['√','%','DEL','AC','+','*','/','-'];
   }
 
   calculationresult(){
@@ -39,11 +39,25 @@ export default class App extends React.Component{
     })
   }
 
+  validate(){
+    const text = this.state.resultText;
+    switch(text.slice(-1)){
+      case '+':
+      case '-':
+      case '/':
+      case '*':
+      case '%':
+      case '√':
+        return false
+    }
+    return true
+  }
+
   buttonPressed(text){
     //console.log(text)
 
     if(text == '='){
-      return this.calculationresult();
+      return this.validate() && this.calculationresult();
     }
 
     this.setState({
@@ -62,8 +76,8 @@ export default class App extends React.Component{
         break
       case '+':
       case '-':
-      case '÷':
-      case 'x':
+      case '/':
+      case '*':
       case '%':
       case '√':
         
