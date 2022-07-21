@@ -36,14 +36,27 @@ export default StyleSheet.create({
     },
     buttons: {
       flexDirection: 'row',
-      flex: 7,
+      flex: 8,
     },
     numbers: {
       flex: 3,
       backgroundColor: '#FEFBF6',
     },
-    operations: {
+    operations2: {
       flex: 1,
+      backgroundColor: '#A6D1E6',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+    },
+    operations1btn: {
+      flex: 3,
+      alignSelf: 'center',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    operations1: {
+      flex: 1,
+      flexDirection: 'row',
       backgroundColor: '#A6D1E6',
       justifyContent: 'space-around',
       alignItems: 'center',
