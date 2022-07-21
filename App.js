@@ -22,6 +22,26 @@ import styles from './styles';
 
 export default function App(){
 
+  let rows = []
+  let nums = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [0, '.', '=']];
+
+  for(let i=0; i<4; i++){
+    let row = []
+    for(let j=0; j<3; j++){
+      row.push(<TouchableOpacity style={styles.btn}>
+        <Text style={styles.btnText}>{nums[i][j]}</Text>
+        </TouchableOpacity>)
+    }
+    rows.push(<View style={styles.row}>{row}</View>)
+  }
+
+  let operations=['+','-','*','/','sqrt'];
+  let ops=[];
+  for(let i=0;i<5;i++){
+    ops.push(<TouchableOpacity style={styles.btn}>
+      <Text style={styles.btnText}>{operations[i]}</Text></TouchableOpacity>)
+  }
+
   return (
       <View style={styles.container}>
         <View style={styles.result}>
@@ -32,32 +52,10 @@ export default function App(){
         </View>
         <View style={styles.buttons}>
           <View style={styles.numbers}>
-            <View style={styles.row}>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>7</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>8</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>9</Text></TouchableOpacity>
-            </View>
-            <View style={styles.row}>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>4</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>5</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>6</Text></TouchableOpacity>
-            </View>
-            <View style={styles.row}>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>1</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>2</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>3</Text></TouchableOpacity>
-            </View>
-            <View style={styles.row}>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>0</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>.</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}> </Text></TouchableOpacity>
-            </View>
+              {rows}
           </View>
           <View style={styles.operations}>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>+</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>-</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>/</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn}><Text style={styles.btnText}>x</Text></TouchableOpacity>
+              {ops}
           </View>
         </View>
       </View>  
