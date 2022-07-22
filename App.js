@@ -33,10 +33,26 @@ export default class App extends React.Component{
 
   calculationresult(){
     const text = this.state.resultText;
-    //seperating operators
-    this.setState({
-      caltext: eval(text)
-    })
+    if(text.search('%') != -1){
+      const percent = text.replace(/%/g, '')
+      let num= parseInt(percent)
+      this.setState({
+        caltext: num/100
+      })
+    }
+    else if(text.search('√') != -1){
+      const percent = text.replace(/√/g, '')
+      let num= parseInt(percent)
+      this.setState({
+        caltext: Math.sqrt(num)
+      })
+    }
+    else{
+      //seperating operators
+      this.setState({
+        caltext: eval(text)
+      })
+    }
   }
 
   validate(){
@@ -46,7 +62,6 @@ export default class App extends React.Component{
       case '-':
       case '/':
       case '*':
-      case '%':
       case '√':
         return false
     }
@@ -67,6 +82,8 @@ export default class App extends React.Component{
 
   operate(operation){
     switch(operation){
+      case 'AC':
+        this.state.resultText='0';
       case 'DEL':
         let text = this.state.resultText.split('');
         text.pop()
