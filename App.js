@@ -26,7 +26,7 @@ export default class App extends React.Component{
     super()
     this.state={
       resultText: "",
-      caltext: "",
+      caltext: "0",
     }
     this.operations=['√','%','DEL','AC','+','*','/','-'];
   }
@@ -84,6 +84,7 @@ export default class App extends React.Component{
     switch(operation){
       case 'AC':
         this.state.resultText='0';
+        this.state.caltext='0';
       case 'DEL':
         let text = this.state.resultText.split('');
         text.pop()
@@ -112,7 +113,7 @@ export default class App extends React.Component{
 
   render(){
     let rows = []
-    let nums = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [0, '.', '=']];
+    let nums = [[7, 8, 9], [4, 5, 6], [1, 2, 3], [0, '.', '=']];
 
     for(let i=0; i<4; i++){
       let row = []
@@ -128,13 +129,13 @@ export default class App extends React.Component{
     let ops1=[];
     for(let i=0;i<3;i++){
       ops1.push(<TouchableOpacity  onPress={()=>this.operate(this.operations[i])} style={styles.operations1btn}>
-        <Text style={styles.btnText}>{this.operations[i]}</Text></TouchableOpacity>)
+        <Text style={styles.opText}>{this.operations[i]}</Text></TouchableOpacity>)
     }
 
     let ops2=[];
     for(let i=3;i<8;i++){
-      ops2.push(<TouchableOpacity onPress={()=>this.operate(this.operations[i])} style={styles.btn}>
-        <Text style={styles.btnText}>{this.operations[i]}</Text></TouchableOpacity>)
+      ops2.push(<TouchableOpacity onPress={()=>this.operate(this.operations[i])} style={styles.operations2btn}>
+        <Text style={styles.opText}>{this.operations[i]}</Text></TouchableOpacity>)
     }
 
     return (
