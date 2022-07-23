@@ -162,5 +162,3 @@ export default class App extends React.Component{
   }
 }
 
-
-//<Text>Hello world </Text>
