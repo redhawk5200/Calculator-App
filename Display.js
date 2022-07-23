@@ -10,6 +10,7 @@ import {
 
 import styles from './styles';
 
+//props are like parameters passed into a function
 export default function Display(props){
 
     if(props.age>18){
